@@ -9,7 +9,7 @@ type ArticlePageProps = {
 };
 
 const Article = async ({ params }: ArticlePageProps) => {
-  const { slug } = await params; // Auflösen des Promises
+  const { slug } = await params;
   const articleData = await getArticleData(slug);
 
   return (
