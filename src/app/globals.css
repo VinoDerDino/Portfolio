@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.article {
+  @apply flex flex-col gap-3 text-lg tracking-wide mb-20
+}
+
+.article > h1 {
+  @apply text-4xl text-center tracking-tight
+}
+
+.article > h2 {
+  @apply text-3xl text-center tracking-tight
+}
