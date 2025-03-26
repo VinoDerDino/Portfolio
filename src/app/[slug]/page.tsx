@@ -1,15 +1,15 @@
-import Link from "next/link"
-import { getArticleData } from "../../../lib/articles"
-import { ArrowLeftIcon } from "@heroicons/react/16/solid"
+import Link from "next/link";
+import { getArticleData } from "../../../lib/articles";
+import { ArrowLeftIcon } from "@heroicons/react/16/solid";
 
 type ArticlePageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
-}
+  }>;
+};
 
 const Article = async ({ params }: ArticlePageProps) => {
-  const { slug } = params;
+  const { slug } = await params; // Auflösen des Promises
   const articleData = await getArticleData(slug);
 
   return (
@@ -21,7 +21,10 @@ const Article = async ({ params }: ArticlePageProps) => {
         </Link>
         <p>{articleData.date.toString()}</p>
       </div>
-      <article className="article" dangerouslySetInnerHTML={{ __html: articleData.contentHTML }} />
+      <article
+        className="article"
+        dangerouslySetInnerHTML={{ __html: articleData.contentHTML }}
+      />
     </section>
   );
 };
