@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Mail from "nodemailer/lib/mailer";
 import { FC } from "react";
 
 const ContactPage: FC = () => {

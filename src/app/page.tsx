@@ -1,4 +1,4 @@
-import { getLastArticles, getLatestArticle } from "../../lib/articles";
+import { getLatestArticle } from "../../lib/articles";
 import ArticleTile from "../../components/article";
 import Image from "next/image";
 import SineWaves from "../../components/sineWave";
@@ -21,12 +21,12 @@ const Home = () => {
 			{/* Section for About Myself */}
 			<DislpayTile title="About Myself">
 				<p>
-					My name is Vincent Berger. I'm a 21-year-old Business Informatics student living in Halle (Saale), Germany.
+					My name is Vincent Berger. I am a 21-year-old Business Informatics student living in Halle (Saale), Germany.
 					<br />
-					I genuinely enjoy programming — from conceptualizing to implementing and analyzing. Currently, I'm developing a small game for the Playdate console in C!
+					I genuinely enjoy programming — from conceptualizing to implementing and analyzing. Currently, I am developing a small game for the Playdate console in C!
 				</p>
 				<p>
-					I'm passionate about embedded software, web development, and game design.
+					I am passionate about embedded software, web development, and game design.
 					<br />
 					I love building things that are both functional and fun!
 				</p>
@@ -41,7 +41,7 @@ const Home = () => {
 					<Link href="https://www.hs-merseburg.de/studium/studiengaenge/wirtschaftsinformatik/">
 						<div className="flex flex-row justify-between mb-4">
 							<h2 className="text-xl font-semibold mb-2">
-								Bachelor's in Business Informatics — Hochschule Merseburg
+								Bachelors in Business Informatics — Hochschule Merseburg
 							</h2>
 							<h2 className="text-sm text-right opacity-70">2023 – Present</h2>
 						</div>
