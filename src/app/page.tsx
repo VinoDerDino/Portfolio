@@ -1,13 +1,10 @@
-import { getLatestArticle } from "../../lib/articles";
-import ArticleTile from "../../components/article";
 import Image from "next/image";
-import SineWaves from "../../components/sineWave";
-import HoverTile from "../../components/hoverTile";
+import SineWaves from "../components/sineWave";
+import HoverTile from "../components/hoverTile";
 import Link from "next/link";
-import DislpayTile from "../../components/DisplayTile";
+import DisplayTile from "../components/DisplayTile";
 
 const Home = () => {
-  const articles = getLatestArticle();
 
   return (
     <>
@@ -19,9 +16,9 @@ const Home = () => {
       </section>
 
 			{/* Section for About Myself */}
-			<DislpayTile title="About Myself">
+			<DisplayTile title="About Myself">
 				<p>
-					My name is Vincent Berger. I am a 21-year-old Business Informatics student living in Halle (Saale), Germany.
+					My name is <span className="text-amber-700 font-bold">Vincent Berger</span>. I am a 21-year-old Business Informatics student living in Halle (Saale), Germany.
 					<br />
 					I genuinely enjoy programming — from conceptualizing to implementing and analyzing. Currently, I am developing a small game for the Playdate console in C!
 				</p>
@@ -33,10 +30,10 @@ const Home = () => {
 				<p>
 					<b>Fun fact:</b> I hold a 2nd Dan black belt in Taekwondo — discipline and focus are in my DNA.
 				</p>
-			</DislpayTile>
+			</DisplayTile>
 
 			{/* Section for Career */}
-			<DislpayTile title="Career">
+			<DisplayTile title="Career">
 				<HoverTile>
 					<Link href="https://www.hs-merseburg.de/studium/studiengaenge/wirtschaftsinformatik/">
 						<div className="flex flex-row justify-between mb-4">
@@ -92,19 +89,12 @@ const Home = () => {
 						</p>
 					</a>
 				</HoverTile>
-			</DislpayTile>
+			</DisplayTile>
 
 			{/* Section for Knowledge */}
-			<DislpayTile title="Knowledge">
+			<DisplayTile title="Knowledge">
 				<p>Test</p>
-			</DislpayTile>
-
-			{/* Section for Newest Article */}
-			<DislpayTile title="Newest Article">
-				{articles !== null &&
-					<ArticleTile {...articles} />
-				}
-			</DislpayTile>
+			</DisplayTile>
 
 			<div className="m-20"/>
     </>

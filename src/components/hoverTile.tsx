@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-interface HoverTileProps {
+type HoverTileProps = {
   children: ReactNode;
 }
 

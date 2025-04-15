@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode;
 }
 
-const DislpayTile = ({ title, children }: Props) => {
+const DisplayTile = ({ title, children }: Props) => {
   return (
     <section className="mx-auto w-11/12 md:w-1/2 mt-40 flex flex-col">
 				<div className="flex flex-col gap-8 items-center">
@@ -22,4 +22,4 @@ const DislpayTile = ({ title, children }: Props) => {
   )
 }
 
-export default DislpayTile
+export default DisplayTile
